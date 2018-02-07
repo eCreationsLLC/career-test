@@ -1,0 +1,30 @@
+.text-light {
+  font-weight: 500;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-heavy {
+  font-weight: bold;
+}
+
+%action-button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dbdbdb;
+  text-align: center;
+  appearance: none;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.inline-btn {
+  @extend %action-button
+}
+
+.btn {
+  @extend %action-button;
+  display: block;
+}
