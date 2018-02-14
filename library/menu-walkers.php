@@ -100,7 +100,7 @@ if ( ! class_exists( 'Social_Media_Nav' ) ) {
 			 */
 			$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
-			if( strstr( $class_names, 'fa ' ) && ! strstr( $class_names, 'custom-icon ' ) ) {
+			if( strstr( $class_names, 'fab ' ) && ! strstr( $class_names, 'custom-icon ' ) ) {
 
 				$item_output = $args->before;
 				$item_output .= '<a'. $attributes .'>';
@@ -142,3 +142,9 @@ if ( ! class_exists( 'Social_Media_Nav' ) ) {
 		}
 	}
 }
+
+add_filter( 'wp_nav_menu_args', function( $args ) {
+	$args['walker'] = new Social_Media_Nav();
+
+	return $args;
+} );
