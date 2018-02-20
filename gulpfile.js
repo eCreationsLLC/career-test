@@ -11,7 +11,7 @@ var gulp = require( 'gulp' ),
 
 var paths = {
     src: {
-        scss: 'sources/scss/*.scss',
+        scss: 'sources/scss/main.scss',
         js: 'sources/js/*.js'
     },
     dest: {
