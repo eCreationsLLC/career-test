@@ -19,5 +19,9 @@
     "run-sequence": "^2.2.1",
     "sequence": "^3.0.0",
     "source-map": "^0.7.0"
+  },
+  "scripts": {
+	"gulp": "gulp",
+	"gulp-tasks": "gulp --tasks"
   }
 }

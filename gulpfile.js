@@ -19,7 +19,7 @@ var paths = {
         js: 'assets/js/',
         cssFile: 'style.css',
         cssMapFile: 'style.css.map',
-        jsFile: 'build.js'
+        jsFile: 'app.js'
     }
 };
 
@@ -61,6 +61,11 @@ gulp.task( 'js', function () {
         .pipe( concat( paths.dest.jsFile ) )
         .pipe( sourcemaps.write() )
         .pipe( gulp.dest( './assets/js/' ) );
+} );
+
+gulp.task( 'watch', function () {
+	gulp.watch( paths.src.scss, ['scss'] );
+	gulp.watch( paths.src.js, ['js'] );
 } );
 
 gulp.task( 'build', function() {
